@@ -40,9 +40,9 @@ enum class Bill {
 enum dayOfWeek{
     SUN, MON, TUE, WED, THU, FRI, SAT
 };
-enum workHolidays{
+/*enum workHolidays{
     SUN, MON
-};
+};*/
 void print_student(student& s){
     cout << setw(10) << "WNO: " << setw(20) << s.wno<< endl
         << setw(10) << "Name: " << setw(20) << s.name << endl
@@ -55,7 +55,7 @@ void get_date(Date& d){
     cout << "Enter date (month/day/year): ";
     cin >> d.month >> trash >> d.day >> trash >> d.year;
 };
-string get_day_of_week(dayOfWeek day){
+/*string get_day_of_week(dayOfWeek day){
     // if (day == dayOfWeek::SUN){
     //     return "Sunday";
     // }else {
@@ -71,7 +71,18 @@ string get_day_of_week(dayOfWeek day){
         case dayOfWeek::SAT: return "Saturday";
         default: return "Pick a day!";
     }
+}*/
+/*struct Cash{
+    billamount hundreds;
+    billamount twenties;
+    billamount tens;
+    billamount fives;
+    billamount ones;
 }
+Cash c {
+    {bill::HUNDRED, 0}, {Bill::TWENTY, 4},
+    {bill::TEN,2},{bill::FIVE,1}, {Bill::ONE,0}
+}*/
 int main() {
 
     student stud;
@@ -91,7 +102,7 @@ int main() {
     << setw(10) << "GPA:" << setw(20) << std.gpa << endl;*/
     dayOfWeek day = dayOfWeek::MON;
     //workHolidays day = workHolidays::SUN;
-    cout << "Day of week" << get_day_of_week(day) << endl;
+    //cout << "Day of week" << get_day_of_week(day) << endl;
     //cout << "Day of week is: " << day << endl;
     //cout << "Holiday: " << day << endl;
     return 0;
